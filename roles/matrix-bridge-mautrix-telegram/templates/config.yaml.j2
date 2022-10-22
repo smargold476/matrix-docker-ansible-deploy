@@ -275,7 +275,7 @@ bridge:
         # If the mode is "whitelist", only the listed chats can be bridged.
         mode: {{ matrix_mautrix_telegram_filter_mode | to_json }}
         # The list of group/channel IDs to filter.
-        list: []
+        list: [ {{ matrix_mautrix_telegram_filter_ids | to_json }} ]
 
     # The prefix for commands. Only required in non-management rooms.
     command_prefix: {{ matrix_mautrix_telegram_command_prefix | to_json }}
